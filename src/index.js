@@ -6,11 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import {createStore} from 'redux';
 import rootReducer from './modules';
 import { Provider } from 'react-redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 
-
-const store = createStore(rootReducer);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const store = createStore(rootReducer, devToolsEnhancer());
 root.render(
   <Provider store={store}>
     <App />

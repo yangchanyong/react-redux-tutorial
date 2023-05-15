@@ -20,12 +20,12 @@ export const insert = text => ({
 
 export const toggle = id => ({
   type: TOGGLE,
-  id
+  id,
 });
 
 export const remove = id => ({
   type: REMOVE,
-  id
+  id,
 });
 
 const initialState = {
